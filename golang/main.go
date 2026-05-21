@@ -1,31 +1,23 @@
 package main
 
-import ("fmt")
+import (
+	"fmt"
+	"modules/algorithms"
+)
 
-// alias
-// INT32 = RUNE
-// BYTE = UINT8
+func main() {
+	listOne := []string{"apple", "banana", "apple", "orange", "banana", "apple"}
+	listTwo := []string{"cat", "dog", "bird", "fish"}
+	listThree := []string{"go", "go", "go", "go", "python"}
 
-// Sobre números reais, tem-se o float32 e o float64
+	resultOne := algorithms.WordCounter(listOne)
+	resultTwo := algorithms.WordCounter(listTwo)
+	resultThree := algorithms.WordCounter(listThree)
 
-func main(){
-	var uIntNumber uint16 = 20
-	fmt.Println(uIntNumber)
-	var numberThree float32 = 40.40
-	var numberFour float64 = 70.333
-	fmt.Printf("Número: %.2f | Número: %.3f\n", numberThree, numberFour)
-
-
-	var compareOne *int64
-	var compareTwo int64 = 20
-	
-	fmt.Println("Insira o valor: ")
-	fmt.Scan(&compareOne)
-
-	if compareOne == compareTwo {
-		fmt.Println("Sim")
-	} else {
-		fmt.Println("Não")
-	}
+	fmt.Println(
+		"1: ", resultOne,
+		"2: ", resultTwo,
+		"3: ", resultThree,
+	)
 
 }
