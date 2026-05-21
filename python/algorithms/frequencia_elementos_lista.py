@@ -1,4 +1,3 @@
-
 """
 
 ## Descrição
@@ -36,8 +35,8 @@ def frequency_count_one(list_to_count: list):
         structure[current_number] = rep
 
     return structure
-    
-def frequency_count_two(list_to_count: list):
+
+def frequency_count_two(list_to_count: list) -> dict:
     structure = {}
 
     for number in list_to_count:
@@ -49,8 +48,25 @@ def frequency_count_two(list_to_count: list):
     return structure
 
 
+def frequency_count_three(list_to_count: list) -> dict:
+
+    # Aqui eu salvo a frequência.
+    frequency = {}
+
+    # Valor - Chave e utilizando a instrução 'enumerate'
+    for _, value in enumerate(list_to_count):
+        # Verifica se existe, se nao, retorna None
+        exists = frequency.get(value, None)
+        if exists == None:
+            frequency[value] = 1
+        else:
+            frequency[value] += 1
+    return frequency
+
 if __name__== "__main__":
     struc_one = frequency_count_one([1, 2, 2, 3, 1, 4, 2, 3])
     struc_two = frequency_count_two([1, 2, 2, 3, 1, 4, 2, 3])
+    struc_three = frequency_count_three([1, 2, 2, 3, 1, 4, 2, 3])
     print(struc_one)
     print(struc_two)
+    print(struc_three)

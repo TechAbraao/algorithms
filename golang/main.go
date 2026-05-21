@@ -6,18 +6,10 @@ import (
 )
 
 func main() {
-	listOne := []string{"apple", "banana", "apple", "orange", "banana", "apple"}
-	listTwo := []string{"cat", "dog", "bird", "fish"}
-	listThree := []string{"go", "go", "go", "go", "python"}
+	var resultOne []int = algorithms.MoveZerosOne([]int{0, 1, 0, 3, 12})
+	fmt.Println(resultOne)
 
-	resultOne := algorithms.WordCounter(listOne)
-	resultTwo := algorithms.WordCounter(listTwo)
-	resultThree := algorithms.WordCounter(listThree)
-
-	fmt.Println(
-		"1: ", resultOne,
-		"2: ", resultTwo,
-		"3: ", resultThree,
-	)
+	var resultTwo []int = algorithms.MoveZerosTwo([]int{0, 1, 0, 3, 12})
+	fmt.Println(resultTwo)
 
 }
